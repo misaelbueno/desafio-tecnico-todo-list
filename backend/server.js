@@ -1,13 +1,14 @@
 const express = require('express');
 const cors = require('cors');
+const TaskController = require('./controller/TaskController');
 
 const app = express();
 app.use(cors());
 
-app.get('/', (req, res) => {
-  res.send('DESAFIO TÉCNICO');
-});
+const PORT = 3000;
 
-app.listen(3000, () => {
-  console.log('Ouvindo na porta 3000');
+app.get('/', TaskController.getAll);
+
+app.listen(PORT, () => {
+  console.log(`Ouvindo na porta ${PORT}`);
 });
