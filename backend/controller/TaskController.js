@@ -1,11 +1,13 @@
+const { Router } = require('express');
+
 const TaskModel = require('../model/TaskModel');
 
-const getAll = async (req, res) => {
+const router = Router();
+
+router.get('/', async (req, res) => {
   const tasksList = await TaskModel.getAll();
 
   return res.status(200).json(tasksList);
-}
+});
 
-module.exports = {
-  getAll,
-};
+module.exports = router;

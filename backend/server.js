@@ -5,9 +5,9 @@ const TaskController = require('./controller/TaskController');
 const app = express();
 app.use(cors());
 
-const PORT = 3000;
+const PORT = 3001;
 
-app.get('/', TaskController.getAll);
+app.use('/tasks', TaskController);
 
 app.listen(PORT, () => {
   console.log(`Ouvindo na porta ${PORT}`);
