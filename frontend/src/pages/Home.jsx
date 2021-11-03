@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Tasks from "../components/Tasks";
+import TaskCard from "../components/TaskCard";
 
 function Home() {
   const [isLoading, setIsLoading] = useState(false);
@@ -22,9 +22,9 @@ function Home() {
         <p>Carregando... </p>
       ) : (
         <div>
-          { tasks.map(({ task, status }, index) => (
-            <Tasks 
-              index={index}
+          { tasks.map(({ _id, task, status }) => (
+            <TaskCard
+              id={_id}
               task={task}
               status={status}
             />
