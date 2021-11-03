@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import InputTask from "../components/InputTask";
 import TaskCard from "../components/TaskCard";
 
 function Home() {
@@ -18,6 +19,7 @@ function Home() {
   return(
     <div>
       <h1>ToDo List</h1>
+      <InputTask />
       { isLoading ? (
         <p>Carregando... </p>
       ) : (

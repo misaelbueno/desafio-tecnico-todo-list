@@ -15,6 +15,8 @@ app.use(express.json());
 app.use(cors());
 
 require('./sockets/status')(io);
+require('./sockets/tasks')(io);
+
 
 const PORT = 3001;
 

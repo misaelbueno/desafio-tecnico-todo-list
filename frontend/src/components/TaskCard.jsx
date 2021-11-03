@@ -13,6 +13,11 @@ function TaskCard({ id, task, status }) {
     setCurrentStatus(newStatus);
   }
 
+  const deleteTask = () => {
+    // console.log(id)
+    socket.emit('deleteTask', { id })
+  }
+
   return (
     <div>
       <ul>  
@@ -27,6 +32,7 @@ function TaskCard({ id, task, status }) {
             </select>
           </label>
         </li>
+        <button onClick={ deleteTask }>Excluir</button>
       </ul>
       
     </div>
