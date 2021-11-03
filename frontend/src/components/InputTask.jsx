@@ -22,7 +22,7 @@ function InputTask() {
         Task
         <input type="text" onChange={ handleChange }/>
         <button onClick={ handleClick } type="button">Enviar</button>
-      </label>        
+      </label>
     </div>
   )
 }
