@@ -2,9 +2,7 @@ import React, { useEffect, useState } from "react";
 import InputTask from "../components/InputTask";
 import TaskCard from "../components/TaskCard";
 
-import { io } from 'socket.io-client';
-
-const socket = io('http://localhost:3001')
+import socket from '../utils/socketClient';
 
 function Home() {
   const [isLoading, setIsLoading] = useState(false);
@@ -23,13 +21,11 @@ function Home() {
   }, []);
 
   socket.on('refreshTasks', (listTask) => {
-    console.log(listTask)
     setTasks(listTask);
-  })
+  });
 
   return(
     <div>
-      { console.log("renderizou home") }
       <h1>ToDo List</h1>
       <InputTask />
       { isLoading ? (

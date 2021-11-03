@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 
-import { io } from 'socket.io-client';
-
-const socket = io('http://localhost:3001')
+import socket from '../utils/socketClient';
 
 function InputTask() {
   const [newTask, setNewTask] = useState('');
