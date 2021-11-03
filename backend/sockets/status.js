@@ -1,5 +1,8 @@
+const TaskModel = require('../model/TaskModel');
+
 module.exports = (io) => io.on('connection', (socket) => {
-  socket.on('changeStatus', ({ id }) => {
-    console.log(`id do status: ${id}`);
+  socket.on('changeStatus', async ({ id, newStatus}) => {
+    // console.log(`id do status: ${id}`);
+    await TaskModel.updateStatus(id, newStatus);
   });
 });
