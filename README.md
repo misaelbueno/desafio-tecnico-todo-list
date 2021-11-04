@@ -13,7 +13,8 @@ Este repositório consiste em uma lista de tarefas para que as pessoas que utili
 
 2. Para rodar a aplicação: npm start
 
-- Pasta backend
+
+- Pasta backend 
 
 1. Instalar as depêndencias: npm install
 
