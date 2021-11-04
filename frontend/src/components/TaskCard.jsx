@@ -3,16 +3,14 @@ import React, { useState } from 'react';
 import socket from '../utils/socketClient';
 
 function TaskCard({ id, task, status }) {
-  const [currentStatus, setCurrentStatus] = useState(status)
+  // const [currentStatus, setCurrentStatus] = useState(status)
 
   const handleChange = (event) => {
     const newStatus = event.target.value;
     socket.emit('changeStatus', { id, newStatus })
-    setCurrentStatus(newStatus);
   }
 
   const deleteTask = () => {
-    // console.log(id)
     socket.emit('deleteTask', { id })
   }
 
@@ -23,7 +21,7 @@ function TaskCard({ id, task, status }) {
           <p><b>Task:</b> { task }</p>
           <label>
             status: 
-           <select value={ currentStatus } onChange={ handleChange }>
+           <select value={ status } onChange={ handleChange }>
               <option value="pendente">pendente</option>
               <option value="em andamento">em andamento</option>
               <option value="pronto">pronto</option>
