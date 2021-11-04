@@ -1,6 +1,6 @@
 # Boas vindas ao repositório do projeto TodoList 
 
-Este repositório consiste em uma lista de tarefas para que as pessoas que utilizarem possam se organizar e te mais produtividade.
+Este repositório consiste em uma lista de tarefas para que as pessoas que utilizarem possam se organizar e ter mais produtividade.
 
 ---
 
