@@ -7,7 +7,6 @@ import socket from '../utils/socketClient';
 function Home() {
   const [isLoading, setIsLoading] = useState(false);
   const [tasks, setTasks] = useState([]);
-  const [newTask, setNewTask] = useState('');
 
   useEffect(() => {
     setIsLoading(true);
