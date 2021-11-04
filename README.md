@@ -6,7 +6,7 @@ Este repositório consiste em uma lista de tarefas para que as pessoas que utili
 
 ---
 
-## Instalação do projeto localmente(para ambas as pastas - backend e frontend)
+## Instalação do projeto localmente
 - Pasta frontend
 
 1. Instalar as depêndencias: npm install
