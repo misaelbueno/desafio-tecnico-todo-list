@@ -5,11 +5,11 @@ module.exports = (io) => io.on('connection', (socket) => {
     await TaskModel.createTask(newTask);
     const newListTasks = await TaskModel.getAll();
     io.emit('refreshTasks', newListTasks);
-  })
+  });
 
   socket.on('deleteTask', async ({ id }) => {
     await TaskModel.excludeTask(id);
     const newListTasks = await TaskModel.getAll();
     io.emit('refreshTasks', newListTasks);    
-  })
-})
+  });
+});

@@ -16,6 +16,8 @@
     "socket.io": "^4.3.1"
   },
   "devDependencies": {
+    "eslint": "^8.1.0",
+    "eslint-config-trybe-backend": "^1.0.4",
     "nodemon": "^2.0.14"
   }
 }

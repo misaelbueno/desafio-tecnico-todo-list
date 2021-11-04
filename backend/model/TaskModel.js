@@ -2,11 +2,11 @@ const { ObjectId } = require('mongodb');
 const connection = require('./connection');
 
 const getAll = async () => connection()
-  .then((db) => db.collection('tasks').find().toArray())
+  .then((db) => db.collection('tasks').find().toArray());
 // .then((result) => result);
 
 const createTask = async (task) => connection()
-  .then((db) => db.collection('tasks').insertOne({ task, status: "pendente" }))
+  .then((db) => db.collection('tasks').insertOne({ task, status: 'pendente' }));
 
 const updateStatus = async (id, status) => {
   if (!ObjectId.isValid(id)) {
@@ -28,7 +28,6 @@ const excludeTask = async (id) => {
     .then((db) =>
       db.collection('tasks')
         .deleteOne({ _id: ObjectId(id) }));
-
 };
 
 module.exports = {
