@@ -16,11 +16,19 @@ function InputTask() {
 
   return (
     <div>
-      <label>
-        Task
-        <input type="text" onChange={ handleChange }/>
-        <button onClick={ handleClick } type="button">Enviar</button>
+      <label htmlFor="id-task">
+        New Task
+        <input
+          id="id-task"
+          type="text"
+          onChange={ handleChange }/>
       </label>
+      <button
+        onClick={ handleClick }
+        type="button"
+      >
+        Enviar
+      </button>
     </div>
   )
 }
