@@ -18,7 +18,9 @@ function TaskCard({ id, task, status }) {
     <div>
       <ul>  
         <li>
-          <p><b>Task:</b> { task }</p>
+          <p>
+            <b>Task:</b> { task }
+          </p>
           <label>
             status: 
            <select value={ status } onChange={ handleChange }>
